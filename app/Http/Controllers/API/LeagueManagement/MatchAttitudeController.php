@@ -12,11 +12,11 @@ use App\Models\Notification;
 
 class MatchAttitudeController  extends Controller
 {
-    function __construct()
-    {
-        $this->middleware('permission:add-match-attitude-condition', ['only' => ['matchAttitudeCondition']]);
-        $this->middleware('permission:add-match-equipment-condition', ['only' => ['matchEquipmentCondition']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware('permission:add-match-attitude-condition', ['only' => ['matchAttitudeCondition']]);
+    //     $this->middleware('permission:add-match-equipment-condition', ['only' => ['matchEquipmentCondition']]);
+    // }
 
     public function matchAttitudeCondition(Request $request)
     {

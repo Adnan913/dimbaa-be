@@ -37,9 +37,14 @@ use App\Http\Controllers\API\LeagueManagement\StaffManagerController;
 Route::post('test-compress',function (Request $request){
    return (new \App\Libraries\ImageProcessor())->resize_image($request,'player_image',500,400);
 });
-Route::get('test-api-routes',function (){
-    return "It works";
+Route::middleware(['auth'])->group(function () {
+    Route::get('test-api-routes',function (){
+        return "It works";
+    });
+
+
 });
+
 Route::group(['middleware' => ['cors', 'json.response']], function () {
 
     Route::any('/', function (Request $request) {
@@ -64,7 +69,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     });
 
     // Route::middleware(['auth:api', 'has.role', 'permission.check'])->group(function () {
-    Route::middleware(['auth:api'])->group(function () {
+    Route::middleware(['auth'])->group(function () {
 
         Route::get('notifications', [GeneralController::class, 'notifications']);
         Route::get('unread-notifications', [GeneralController::class, 'unread_notifications']);

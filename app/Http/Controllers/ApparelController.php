@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Storage;
 class ApparelController extends Controller
 {
     
-    function __construct()
-    {
-        $this->middleware('permission:view-apparel', ['only' => ['index']]);
-        $this->middleware('permission:add-apparel', ['only' => ['store']]);
-        $this->middleware('permission:edit-apparel', ['only' => ['update']]);
-        $this->middleware('permission:delete-apparel', ['only' => ['destory']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware('permission:view-apparel', ['only' => ['index']]);
+    //     $this->middleware('permission:add-apparel', ['only' => ['store']]);
+    //     $this->middleware('permission:edit-apparel', ['only' => ['update']]);
+    //     $this->middleware('permission:delete-apparel', ['only' => ['destory']]);
+    // }
     
     public function index(Request $request){
         $request->validate([

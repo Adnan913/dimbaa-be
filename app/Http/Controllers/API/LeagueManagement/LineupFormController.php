@@ -9,11 +9,11 @@ use App\Models\LineupForm;
 class LineupFormController  extends Controller
 {
     
-    function __construct()
-    {
-        $this->middleware('permission:view-team-players', ['only' => ['detail']]);
-        $this->middleware('permission:add-team-players', ['only' => ['submission']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware('permission:view-team-players', ['only' => ['detail']]);
+    //     $this->middleware('permission:add-team-players', ['only' => ['submission']]);
+    // }
 
     public function detail(Request $request)
     {

@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Auth;
 class StaffManagerController extends Controller
 {
     
-    function __construct()
-    {
-        $this->middleware('permission:view-staff', ['only' => ['get']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware('permission:view-staff', ['only' => ['get']]);
+    // }
     
     public function get()
     {
