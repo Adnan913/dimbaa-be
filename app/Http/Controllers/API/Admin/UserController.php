@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     
+    
     // function __construct()
     // {
         // $this->middleware('permission:view-users', ['only' => ['index','show']]);
